@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zodiac Sign Finder</title>
+    <link rel="stylesheet" href="content/css/styles.css">
+    <link rel="icon" href="content/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+</head>
+<body>
+
+    <div class="container">
+        <h1>What's Your Zodiac Sign?</h1>
+        <label for="dob" class="dob-label">Select Your Date of Birth:</label>
+        <div class="input-container">
+            <input type="date" id="dob" class="dob-input" aria-label="Date of Birth">
+        </div>
+        <button class="btn" onclick="findZodiac()">Find My Zodiac Sign</button>
+
+        <div class="result" id="result" aria-live="polite"></div>
+        
+        <div class="image-container">
+            <img id="zodiacImage" class="zodiac-image" src="" alt="Zodiac Sign Image" aria-hidden="true">
+        </div>
+    </div>
+
+    <script src="content/js/script.js"></script>
+</body>
+</html>

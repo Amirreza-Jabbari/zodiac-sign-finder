@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.dob-label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.dob-input {
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.dob-input:focus {
+    outline: none;
+    box-shadow: 0 0 12px rgba(0, 123, 255, 0.5);
+}
+
+.btn {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: #4CAF50;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin-top: 15px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+/* Animations for the result text and image */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.result.show {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.image-container {
+    margin-top: 20px;
+    display: none;
+    justify-content: center;
+}
+
+.image-container.show {
+    display: flex;
+}
+
+.zodiac-image {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.zodiac-image.show {
+    animation: fadeIn 1s ease forwards;
+}
